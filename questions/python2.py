@@ -19,7 +19,8 @@
 
 # <QUESTION 1>
 
-# Given a string, return a string where for every char in the original string, there are three chars.
+# Given a string, return a string where for every char in the original string, 
+# there are three chars.
 
 # <EXAMPLES>
 
@@ -31,7 +32,12 @@
 # How does a for loop iterate through a string?
 
 def one(string):
-    return ""
+    s = []
+    for x in string:
+        s.append(x*3) 
+
+    y = "".join(s)
+    return y
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -52,7 +58,18 @@ def one(string):
 
 
 def two(number):
-    return False
+    number = 20
+    if number == 2:
+        return True
+    else:
+        for i in range(2, number):
+            if (number % i) == 0:
+                return False
+                break
+            else:
+                return True
+                break
+
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -124,7 +141,8 @@ def four(string1, string2):
 
 
 def five():
-    return []
+    import random
+    return (random.sample([i for i in range(100,200) if i%2==0], 5))
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -146,7 +164,16 @@ def five():
 
 
 def six(string):
-    return False
+    if string[-1] == 'y' and string[-2] == 'p':
+        return True
+    elif string[-1] == 'Y' and string[-2] == 'P':
+        return True
+    elif string[-1] == 'Y' and string[-2] == 'p':
+        return True
+    elif string[-1] == 'y' and string[-2] == 'P':
+        return True
+    else:
+        return False
 
 # -------------------------------------------------------------------------------------------------------------------------------------------------
 
